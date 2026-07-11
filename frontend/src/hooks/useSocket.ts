@@ -46,7 +46,7 @@ export function useSocket(token: string | null) {
     const socket = io(SIGNALING_URL, {
       auth: { token },
       autoConnect: true,
-      transports: ["websocket"],
+      transports: ["polling", "websocket"],
     });
 
     socketRef.current = socket;
