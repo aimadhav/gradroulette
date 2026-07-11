@@ -18,12 +18,8 @@ describe("resolveInstitution", () => {
     expect(result?.name).toBe("Google");
   });
 
-  it("resolves the sandbox gmail domain for testing", () => {
-    const result = resolveInstitution("someone@gmail.com");
-    expect(result).toEqual({ name: "Resend Sandbox (Gmail)", category: "student", tier: "SANDBOX" });
-  });
-
   it("rejects free email providers for professional category", () => {
+    expect(resolveInstitution("someone@gmail.com")).toBeNull();
     expect(resolveInstitution("someone@yahoo.com")).toBeNull();
     expect(resolveInstitution("someone@outlook.com")).toBeNull();
     expect(resolveInstitution("someone@hotmail.com")).toBeNull();
