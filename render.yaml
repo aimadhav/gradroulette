@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: gradroulette-backend
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: PORT
+        value: 4000
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        sync: false        # Set this manually in the Render dashboard
+      - key: RESEND_API_KEY
+        sync: false        # Set this manually in the Render dashboard
+      - key: METERED_SECRET_KEY
+        sync: false        # Set this manually in the Render dashboard
+      - key: METERED_APP_DOMAIN
+        value: gradroulette.metered.live
+      - key: GOOGLE_CLIENT_ID
+        sync: false        # Set this manually in the Render dashboard
