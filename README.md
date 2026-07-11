@@ -6,8 +6,6 @@ GradRoulette is a TypeScript web app built around three moving parts:
 
 - `backend`: an Express + Socket.IO server that handles auth, queueing, matchmaking, and signaling
 - `frontend`: a React + Vite client that drives the login flow, queue UI, and WebRTC call experience
-- `production_guide.md`: a deployment-oriented companion document for hosting and live testing
-
 The current codebase implements the core MVP loop end to end: a user authenticates with email OTP, a guest can join without email, the signaling server matches users in-memory, and the browser establishes a direct WebRTC call with TURN fallback support.
 
 ## What This App Does
@@ -66,7 +64,6 @@ frontend/
     hooks/
     screens/
     services/
-production_guide.md
 render.yaml
 ```
 
@@ -384,4 +381,3 @@ Those differences do not block the current app from running, but they matter if 
 4. Set `VITE_SIGNALING_SERVER_URL` and, optionally, `VITE_GOOGLE_CLIENT_ID` on the frontend.
 5. Open the app, authenticate, pick a filter, and join a queue.
 
-If you want, I can also turn the README into a cleaner project landing page style doc or update `production_guide.md` so both documents match each other.
