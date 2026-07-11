@@ -1,0 +1,8 @@
+[
+  { "domain": "iitb.ac.in", "name": "IIT Bombay", "category": "student", "tier": "IIT" },
+  { "domain": "iitd.ac.in", "name": "IIT Delhi", "category": "student", "tier": "IIT" },
+  { "domain": "nitt.edu", "name": "NIT Trichy", "category": "student", "tier": "NIT" },
+  { "domain": "iiitnr.ac.in", "name": "IIIT Naya Raipur", "category": "student", "tier": "IIIT" },
+  { "domain": "bits-pilani.ac.in", "name": "BITS Pilani", "category": "student", "tier": "BITS" },
+  { "domain": "gmail.com", "name": "Resend Sandbox (Gmail)", "category": "student", "tier": "SANDBOX" }
+]
